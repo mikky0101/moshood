@@ -1,0 +1,517 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bitcointradinginc.com</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="{% static 'app.min0522.css' %}" rel="stylesheet" />
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="{% static 'jquery-jvectormap.css' %}" rel="stylesheet" />
+    <link href="{% static 'nv.d3.css' %}" rel="stylesheet" />
+    <link href="{% static 'daterangepicker.css' %}" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="{% static 'bootstrap-social.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3233d881f8.js" crossorigin="anonymous"></script>
+    <link href="{% static 'switchery.min.css' %}" rel="stylesheet" />
+
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+    <meta property="og:title" content="Bitcointradinginc.com.">
+    <meta property="og:description" content="Advanced Asset Management">
+    <meta property="og:image" content="{% static 'facebook.jpg' %}">
+    <meta property="og:type" content="website" />
+
+</head>
+
+<body style="background-image: url(../static/mememe.jfif);">
+    <!-- begin page-cover -->
+    <div class="page-cover"></div>
+    <!-- end page-cover -->
+    <!-- begin #page-loader -->
+    <!-- <div id="page-loader" class="fade show">
+        <span class="spinner"></span>
+    </div> -->
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <!-- begin #header -->
+        <div id="header" class="header navbar-default">
+            <!-- begin navbar-header -->
+            <div class="navbar-header">
+                <a href="{% url 'main:home' %}" class="navbar-brand"><img src="{% static 'log002.png' %}"> </a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- end navbar-header -->
+            <!-- begin header-nav -->
+            <ul class="navbar-nav navbar-right">
+                <li class="navbar-form">
+                    <form action="" method="POST" name="search_form"><input type="hidden" name="form_id" value="16491718053523"><input type="hidden" name="form_token" value="2e6ad5e2e0607754139597f2c73b43d9"><input type="hidden" name="form_id" value="16082437449329"><input type="hidden" name="form_token"
+                            value="388714aa74bd9a5b6aad5065ee56187e">
+                        <div class="form-group">
+                            <div class="badge badge-dark" style="margin-top: 2px; margin-bottom: auto; padding: 10px; font-size: 0.7rem" id="clockbox"></div>
+
+                            <script type="text/javascript">
+                                var tmonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                                function GetClock() {
+                                    var tzOffset = +0; //set this to the number of hours offset from UTC
+
+                                    var d = new Date();
+                                    var dx = d.toGMTString();
+                                    dx = dx.substr(0, dx.length - 3);
+                                    d.setTime(Date.parse(dx))
+                                    d.setHours(d.getHours() + tzOffset);
+                                    var nmonth = d.getMonth(),
+                                        ndate = d.getDate(),
+                                        nyear = d.getFullYear();
+
+                                    var nhour = d.getHours(),
+                                        nmin = d.getMinutes(),
+                                        nsec = d.getSeconds(),
+                                        ap;
+
+                                    if (nhour == 0) {
+                                        ap = " AM";
+                                        nhour = 12;
+                                    } else if (nhour < 12) {
+                                        ap = " AM";
+                                    } else if (nhour == 12) {
+                                        ap = " PM";
+                                    } else if (nhour > 12) {
+                                        ap = " PM";
+                                        nhour -= 12;
+                                    }
+
+                                    if (nmin <= 9) nmin = "0" + nmin;
+                                    if (nsec <= 9) nsec = "0" + nsec;
+
+                                    var clocktext = "" + tmonth[nmonth] + "-" + ndate + "-" + nyear + ", " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                                    document.getElementById('clockbox').innerHTML = clocktext;
+                                }
+
+                                GetClock();
+                                setInterval(GetClock, 1000);
+                            </script>
+
+
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown navbar-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="{% static 'myuser.jpg' %}" alt="" /> <span class="d-none d-md-inline">mimi22 </span> <b class="caret"></b> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item"><i class="fa fa-edit"></i>&nbsp;&nbsp;Edit Account</a>
+                        <a href="#" class="dropdown-item"><i class="fa fa-shield-alt"></i>&nbsp;&nbsp;2F Authentication</a>
+                        <a href="{% url 'main:logout' %}" class="dropdown-item"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- begin sidebar scrollbar -->
+            <div data-scrollbar="true" data-height="100%">
+                <!-- begin sidebar user -->
+                <ul class="nav">
+                    <li class="nav-profile">
+                        <a href="javascript:;" data-toggle="nav-profile">
+                            <div class="cover with-shadow"></div>
+                            <div class="info">
+                                <b class="caret pull-right"></b>{{ user.account_balance }}
+                                <small>Account Balance</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <ul class="nav nav-profile">
+                            <li>0.00 Usd Of PerfectMoney</li>
+                            <li>0.00 Usd Of Payeer</li>
+                            <li>0.00 Usd Of Bitcoin</li>
+                            <li>0.00 Usd Of Litecoin</li>
+                            <li>0.00 Usd Of Dogecoin</li>
+                            <li>0.00 Usd Of Ethereum</li>
+                            <li>0.00 Usd Of Bitcoin Cash</li>
+                            <li>0.00 Usd Of Dash</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- end sidebar user -->
+                <!-- begin sidebar nav -->
+                <ul class="nav">
+                    <li class="nav-header">Navigation</li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="fa fa-th-large"></i> <span>Dashboard</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:deposit' %}"> <i class="fas fa-donate"></i> <span>Make a Deposit</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:withdraw' %}"> <i class="fas fa-hand-holding-usd"></i> <span>Withdrawal</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:active' %}"> <i class="far fa-money-bill-alt"></i> <span>Active Deposits</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:history' %}"> <i class="fas fa-search-dollar"></i> <span>Account History</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:faq' %}"> <i class="far fa-question-circle"></i> <span>FAQ</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:support' %}"> <i class="fas fa-headset"></i> <span>Support</span> </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a>
+                    </li>
+                    <!-- end sidebar minify button -->
+                </ul>
+                <!-- end sidebar nav -->
+            </div>
+            <!-- end sidebar scrollbar -->
+        </div>
+        <div class="sidebar-bg"></div>
+
+
+
+        <script language="javascript">
+            <!--
+            function openCalculator(id) {
+
+                w = 225;
+                h = 400;
+                t = (screen.height - h - 30) / 2;
+                l = (screen.width - w - 30) / 2;
+                window.open('?a=calendar&type=' + id, 'calculator' + id, "top=" + t + ",left=" + l + ",width=" + w + ",height=" + h + ",resizable=1,scrollbars=0");
+
+
+
+                for (i = 0; i < document.spendform.h_id.length; i++) {
+                    if (document.spendform.h_id[i].value == id) {
+                        document.spendform.h_id[i].checked = true;
+                    }
+                }
+
+
+
+            }
+
+            function updateCompound() {
+                var id = 0;
+                var tt = document.spendform.h_id.type;
+                if (tt && tt.toLowerCase() == 'hidden') {
+                    id = document.spendform.h_id.value;
+                } else {
+                    for (i = 0; i < document.spendform.h_id.length; i++) {
+                        if (document.spendform.h_id[i].checked) {
+                            id = document.spendform.h_id[i].value;
+                        }
+                    }
+                }
+
+                var cpObj = document.getElementById('compound_percents');
+                if (cpObj) {
+                    while (cpObj.options.length != 0) {
+                        cpObj.options[0] = null;
+                    }
+                }
+
+                if (cps[id] && cps[id].length > 0) {
+                    document.getElementById('coumpond_block').style.display = '';
+
+                    for (i in cps[id]) {
+                        cpObj.options[cpObj.options.length] = new Option(cps[id][i]);
+                    }
+                } else {
+                    document.getElementById('coumpond_block').style.display = 'none';
+                }
+            }
+            var cps = {};
+            -->
+        </script>
+
+
+
+
+
+        <br>
+
+        <style>
+        section {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            
+            section>div {
+                flex: 1;
+                padding: 0.5rem;
+                padding-top: 1.3rem;
+            }
+            
+            input[type="radio"] {
+                display: none;
+                &:not(:disabled)~label {
+                    cursor: pointer;
+                }
+                &:disabled~label {
+                    color: hsla(150, 5%, 75%, 1);
+                    border-color: hsla(150, 5%, 75%, 1);
+                    box-shadow: none;
+                    cursor: not-allowed;
+                }
+            }
+            
+            label {
+                height: 100%;
+                display: block;
+                background: rgba(255, 255, 255, 0.1);
+                border: 2px solid #00acac;
+                border-radius: 20px;
+                padding-top: 1.4rem;
+                padding-bottom: 0.3rem;
+                margin: 0.1rem;
+                text-align: center;
+                box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+                position: relative;
+            }
+            
+            input[type="radio"]:checked+label {
+                background: rgba(0, 0, 0, .25);
+                c: hsla(215, 0%, 100%, 1);
+                box-shadow: 0px 0px 10px #00acac;
+            }
+            
+            input[type="radio"]:checked+label::after {
+                color: hsla(215, 5%, 25%, 1);
+                font-family: FontAwesome;
+                border: 2px solid #00acac;
+                content: "\f107";
+                color: #cccccc;
+                font-size: 24px;
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background: #00acac;
+                box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
+            }
+        }
+        input[type="radio"]:checked+label .x2 {
+            color: #00acac;
+        }
+        input[type="radio"]#control_05:checked+label {
+            background: red;
+            border-color: black;
+        }
+        p {
+            font-weight: 500;
+        }
+        @media only screen and (max-width: 700px) {
+            section {
+                flex-direction: column;
+            }
+        }
+        </style>
+        <div id="content" class="content">
+
+
+            <!-- begin breadcrumb -->
+            <!-- end breadcrumb -->
+            <!-- begin page-header -->
+            <h1 class="page-header mb-3"><i class="fas fa-donate"></i> Make a Deposit</h1>
+            <!-- end page-header -->
+            <!-- begin daterange-filter -->
+            <!-- end daterange-filter -->
+            <!-- begin row -->
+
+            <form method="POST" action="{% url 'main:deposit' %}" name="spendform"><input type="hidden" name="form_id" value="16491718053523"><input type="hidden" name="form_token" value="2e6ad5e2e0607754139597f2c73b43d9"> {% csrf_token %}
+                <input type=hidden name=a value=deposit>
+                <div class="row">
+                    <div class="col-xl-8 col-12">
+                        <!-- begin panel -->
+                        <div class="panel panel-inverse">
+                            <!-- begin panel-heading -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">SELECT INVESTMENT PLAN</h4>
+                            </div>
+                            <!-- end panel-heading -->
+                            <!-- begin alert -->
+                            <!-- end alert -->
+                            <!-- begin panel-body -->
+                            <div class="panel-body">
+                                <section>
+
+
+                                    <div>
+                                        <input type="radio" id="control_01" name="h_id" value="1" checked>
+                                        <label for="control_01">
+                                                  <h3 class="x2">Basic</h3>
+                                                  <div class="d-md-none">
+                                                      <p class="mb-2 x2 font-weight-bold"> 500% after 24 hours </p>
+                                                      <p class="mb-1">Min: $100 <i class="fas fa-arrows-alt-h"></i> Max: $1,000.00</p>
+                                                    </div>
+                                                  <div class="d-none d-md-inline-block">
+                                                      <p class="mb-3 x2 font-weight-bold h5">500% after 24 hourss</p>
+                                                      <p class="mb-1">Min amount: $100.00 </p>
+                                                      <p class="mb-1">Max amount: $1,000.00 </p>
+                                                      <p class="mb-1">ROI: 500% <!--(90% profit)--></p>
+                                                      <p class="mb-1">CANCEL AT ANY TIME</p>
+                                                  </div>
+                                              </label>
+                                    </div>
+
+
+                                    <div>
+                                        <input type="radio" id="control_02" name="h_id" value="2">
+                                        <label for="control_02">
+                                                  <h3 class="x2">Premium</h3>
+                                                  <div class="d-md-none">
+                                                      <p class="mb-2 x2 font-weight-bold"> 500% after 24 hours </p>
+                                                      <p class="mb-1">Min: $200 <i class="fas fa-arrows-alt-h"></i> Max: $2,000.00</p>
+                                                    </div>
+                                                  <div class="d-none d-md-inline-block">
+                                                      <p class="mb-3 x2 font-weight-bold h5"> 500% after 24 hours </p>
+                                                      <p class="mb-1">Min amount: $200</p>
+                                                      <p class="mb-1">Max amount: $2,000.00</p>
+                                                      <p class="mb-1">ROI: 500% <!--(160% profit)--> </p>
+                                                      <p class="mb-1">CANCEL AT ANY TIME</p>
+                                                  </div>
+                                              </label>
+                                    </div>
+
+
+
+                                    <!-- <div>
+                                              <input type="radio" id="control_03" name="h_id" value="3">
+                                              <label for="control_03">
+                                                  <h3 class="x2">Supreme</h3>
+                                                  <div class="d-md-none">
+                                                      <p class="mb-2 x2 font-weight-bold">5% Daily for 50 days</p>
+                                                      <p class="mb-1">Min: $10,000 <i class="fas fa-arrows-alt-h"></i> Max: $250,000</p>
+                                                  </div>
+                                                  <div class="d-none d-md-inline-block">
+                                                      <p class="mb-3 x2 font-weight-bold h5">5% Daily for 50 days</p>
+                                                      <p class="mb-1">Min amount: $10,000</p>
+                                                      <p class="mb-1">Max amount: $250,000</p>
+                                                      <p class="mb-1">ROI: 350% (250% profit)</p>
+                                                      <p class="mb-1">CANCEL AT ANY TIME</p>
+                                                  </div>
+                                              </label>
+                                          </div>
+                                          -->
+
+
+                                </section>
+                                <script>
+                                    cps[] = ;
+                                </script>
+
+                            </div>
+                            <!-- end panel-body -->
+                        </div>
+                        <!-- end panel -->
+                    </div>
+                    <div class="col-xl-4">
+                        <!-- begin panel -->
+                        <div class="panel panel-inverse">
+                            <!-- begin panel-heading -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">SELECT PAYMENT AND ENTER AMOUNT</h4>
+                            </div>
+                            <!-- end panel-heading -->
+                            <!-- begin alert -->
+                            <!-- end alert -->
+                            <!-- begin panel-body -->
+                            <div class="panel-body" style="margin-bottom: 5px">
+
+                                <select name="type" onchange="document.ps.submit();" style="font-size: 14px;" class="mt-2 mb-4 form-control font-weight-bold">
+                                                                                                                                                                                            <option style="background-color: #545454" name="type" value="process_1000" >Bitcoin</option>
+                                                        </select>
+                                <div class="input-group mb-1 pt-2">
+                                    <div class="input-group-prepend">
+                                        <button type="button" class="btn font-weight-bold text-white" style="font-size: 13px; background-color:rgba(255,255,255,.25)">$</button>
+                                    </div>
+                                    <input style="font-size: 14px;" name="amount" type="number" data-decimal="2" min="10" max="250000" step="0.01" class="form-control font-weight-bold" placeholder="Enter Amount 10 - 250000" value='100.00'>
+                                </div>
+                            </div>
+                            <div class="pb-3 pt-2 text-center">
+                                <button type="submit" class="btn btn-lg btn-teal no-caret">Make a Deposit</button>
+                            </div>
+                            <div style="padding-bottom: 28px"></div>
+                            <!-- end panel-body -->
+                        </div>
+                        <!-- end panel -->
+                    </div>
+            </form>
+            <!-- DEL -->
+            <!-- DEL -->
+            <!-- DEL -->
+            <!-- DEL -->
+            </div>
+        </div>
+    </div>
+    <!-- end col-6 -->
+    <!-- begin col-6 -->
+    <!-- end #content -->
+    <!-- begin theme-panel -->
+    <!-- end theme-panel -->
+    <!-- begin scroll to top btn -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-teal btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+    <!-- end scroll to top btn -->
+    <!-- end page container -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{% static 'app.min2.js' %}"></script>
+    <script src="{% static 'transparent.min2.js' %}"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="{% static 'd3.min.js' %}"></script>
+    <script src="{% static 'nv.d3.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap-world-mill.js' %}"></script>
+    <script src="{% static 'apexcharts.min.js' %}"></script>
+    <script src="{% static 'moment.min.js' %}"></script>
+    <script src="{% static 'daterangepicker.js' %}"></script>
+    <script src="{% static 'dashboard-v3.js' %}"></script>
+    <script src="{% static 'jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'responsive.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'buttons.colVis.min.js' %}"></script>
+    <script src="{% static 'buttons.flash.min.js' %}"></script>
+    <script src="{% static 'buttons.html5.min.js' %}"></script>
+    <script src="{% static 'buttons.print.min.js' %}"></script>
+    <script src="{% static 'pdfmake.min.js' %}"></script>
+    <script src="{% static 'vfs_fonts.js' %}"></script>
+    <script src="{% static 'jszip.min.js' %}"></script>
+    <script src="{% static 'table-manage-buttons.demo.js' %}"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+</body>
+
+<script language=javascript>
+    for (i = 0; i < document.spendform.type.length; i++) {
+        if ((document.spendform.type[i].value.match(/^process_/))) {
+            document.spendform.type[i].checked = true;
+            break;
+        }
+    }
+    updateCompound();
+</script>
+
+
+</html>

@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bitcointradinginc.com</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="Bitcointradinginc.com Sign In" name="description" />
+    <meta content="" name="author" />
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="{% static 'app.min2.css' %}" rel="stylesheet" />
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'safari-pinned-tab.svg' %}" color="#343536">
+    <meta name="msapplication-TileColor" content="#343536">
+    <meta name="theme-color" content="#343536">
+</head>
+
+
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<script language=javascript>
+    function checkform() {
+        if (document.mainform.username.value == '') {
+            alert("Please type your username!");
+            document.mainform.username.focus();
+            return false;
+        }
+        if (document.mainform.password.value == '') {
+            alert("Please type your password!");
+            document.mainform.password.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+<body class="pace-top">
+    <!-- begin #page-loader -->
+    <!-- <div id="page-loader" class="fade show">
+        <span class="spinner"></span>
+    </div> -->
+    <!-- end #page-loader -->
+
+
+    <div id="google_translate_element"></div>
+
+
+
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade">
+        <!-- begin login -->
+        <div class="login login-v1">
+            <!-- begin login-container -->
+            <div class="login-container">
+                <!-- begin login-header -->
+
+                <div class="login-header">
+                    <div class="brand">
+                        <img style="cursor: pointer" src="{% static 'log002.png' %}" width="200px">
+                        <small class="ml-2 mt-1">Login to your account</small>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                </div>
+                <!-- end login-header -->
+                <!-- begin login-body -->
+                <div class="login-body">
+                    <!-- begin login-content -->
+                    <div class="login-content">
+                        <form method="POST" action="{% url 'main:login' %}" name=mainform class="margin-bottom-0">
+                            {% csrf_token %}
+                            <input type="hidden" name="form_id" value="16491626877472">
+                            <input type="hidden" name="form_token" value="92b1c334fe5d798ea2699ebdace62ced">
+                            <input type=hidden name=a value='do_login'>
+                            <input type=hidden name=follow value=''>
+                            <input type=hidden name=follow_id value=''>
+                            <div class="form-group m-b-20">
+                                <input type="text" class="form-control form-control-lg inverse-mode" name="username" value='' placeholder="Username" />
+                            </div>
+                            <div class="form-group m-b-20">
+                                <input type="password" name="password" class="form-control form-control-lg inverse-mode" placeholder="Password" />
+                            </div>
+
+
+
+
+
+
+
+
+                            <div class="login-buttons">
+                                <button type="submit" class="btn btn-teal btn-block btn-lg">Sign In</button>
+                                <div class="text-center">
+
+                                    <div class="row pt-4">
+                                        <div class="col-7 text-center">
+                                            No account?
+                                            <a class="text-teal" href="{% url 'main:sign-up' %}">Register here!</a>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <a href="#" class="text-muted">Forgot Password?</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                        </form>
+                        </div>
+                        <!-- end login-content -->
+                    </div>
+                    <!-- end login-body -->
+                </div>
+                <!-- end login-container -->
+            </div>
+            <!-- end login -->
+            <!-- begin scroll to top btn -->
+            <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+            <!-- end scroll to top btn -->
+        </div>
+        <!-- end page container -->
+        <!-- ================== BEGIN BASE JS ================== -->
+        <script src="{% static 'app.min2.js' %}"></script>
+        <script src="{% static 'transparent.min2.js' %}"></script>
+        <!-- ================== END BASE JS ================== -->
+</body>
+
+</html>

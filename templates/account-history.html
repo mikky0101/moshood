@@ -1,0 +1,546 @@
+{% load static %}
+<script src="//code.tidio.co/ewmocfvcluaifuqzjjezguqnbvju3c6g.js" async>
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bitcointradinginc.com</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="{% static 'app.min0522.css' %}" rel="stylesheet" />
+    <!----------------- www.bitcoinstart.website ----------->
+    <meta name="designer" href="https://www.bitcoinstart.website">
+
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="{% static 'jquery-jvectormap.css' %}" rel="stylesheet" />
+    <link href="{% static '/nv.d3.css' %}" rel="stylesheet" />
+    <link href="{% static '/boostrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'daterangepicker.css' %}" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="{% static 'bootstrap-social.css' %}" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/3233d881f8.js' %}" crossorigin="anonymous"></script>
+    <link href="{% static 'switchery.min.css' %}" rel="stylesheet" />>
+
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+    <meta property="og:title" content="Bitcointradinginc.com.">
+    <meta property="og:description" content="Advanced Asset Management">
+    <meta property="og:image" content="images/facebook.jpg">
+    <meta property="og:type" content="website" />
+
+</head>
+
+<body style="background-image: url(../static/mememe.jfif);">
+    <!-- begin page-cover -->
+    <div class="page-cover"></div>
+    <!-- end page-cover -->
+    <!-- begin #page-loader -->
+    <!-- <div id="page-loader" class="fade show">
+        <span class="spinner"></span>
+    </div> -->
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <!-- begin #header -->
+        <div id="header" class="header navbar-default">
+            <!-- begin navbar-header -->
+            <div class="navbar-header">
+                <a href="{% url 'main:home' %}" class="navbar-brand"><img src="{% static 'log002.png' %}"> </a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- end navbar-header -->
+            <!-- begin header-nav -->
+            <ul class="navbar-nav navbar-right">
+                <li class="navbar-form">
+                    <form name="search_form"><input type="hidden" name="form_id" value="16491761611513"><input type="hidden" name="form_token" value="4a231de3ddc2995e914d9a293e2f4fc5"><input type="hidden" name="form_id" value="16082437449329"><input type="hidden" name="form_token"
+                            value="388714aa74bd9a5b6aad5065ee56187e">
+                        <div class="form-group">
+                            <div class="badge badge-dark" style="margin-top: 2px; margin-bottom: auto; padding: 10px; font-size: 0.7rem" id="clockbox"></div>
+
+                            <script type="text/javascript">
+                                var tmonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                                function GetClock() {
+                                    var tzOffset = +0; //set this to the number of hours offset from UTC
+
+                                    var d = new Date();
+                                    var dx = d.toGMTString();
+                                    dx = dx.substr(0, dx.length - 3);
+                                    d.setTime(Date.parse(dx))
+                                    d.setHours(d.getHours() + tzOffset);
+                                    var nmonth = d.getMonth(),
+                                        ndate = d.getDate(),
+                                        nyear = d.getFullYear();
+
+                                    var nhour = d.getHours(),
+                                        nmin = d.getMinutes(),
+                                        nsec = d.getSeconds(),
+                                        ap;
+
+                                    if (nhour == 0) {
+                                        ap = " AM";
+                                        nhour = 12;
+                                    } else if (nhour < 12) {
+                                        ap = " AM";
+                                    } else if (nhour == 12) {
+                                        ap = " PM";
+                                    } else if (nhour > 12) {
+                                        ap = " PM";
+                                        nhour -= 12;
+                                    }
+
+                                    if (nmin <= 9) nmin = "0" + nmin;
+                                    if (nsec <= 9) nsec = "0" + nsec;
+
+                                    var clocktext = "" + tmonth[nmonth] + "-" + ndate + "-" + nyear + ", " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                                    document.getElementById('clockbox').innerHTML = clocktext;
+                                }
+
+                                GetClock();
+                                setInterval(GetClock, 1000);
+                            </script>
+
+
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown navbar-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="{% static 'myuser.jpg' %}" alt="" /> <span class="d-none d-md-inline">mimi22 </span> <b class="caret"></b> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item"><i class="fa fa-edit"></i>&nbsp;&nbsp;Edit Account</a>
+                        <a href="#" class="dropdown-item"><i class="fa fa-shield-alt"></i>&nbsp;&nbsp;2F Authentication</a>
+                        <a href="{% url 'main:logout' %}" class="dropdown-item"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- begin sidebar scrollbar -->
+            <div data-scrollbar="true" data-height="100%">
+                <!-- begin sidebar user -->
+
+                <!-- end sidebar user -->
+                <!-- begin sidebar nav -->
+                <ul class="nav">
+                    <li class="nav-header">Navigation</li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="fa fa-th-large"></i> <span>Dashboard</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:deposit' %}"> <i class="fas fa-donate"></i> <span>Make a Deposit</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:withdraw' %}"> <i class="fas fa-hand-holding-usd"></i> <span>Withdrawal</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="far fa-money-bill-alt"></i> <span>Active Deposits</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:history' %}"> <i class="fas fa-search-dollar"></i> <span>Account History</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="far fa-handshake"></i> <span>Referral Program</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="fas fa-calculator"></i> <span>Profit Calculator</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:faq' %}"> <i class="far fa-question-circle"></i> <span>FAQ</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:support' %}"> <i class="fas fa-headset"></i> <span>Support</span> </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a>
+                    </li>
+                    <!-- end sidebar minify button -->
+                </ul>
+                <!-- end sidebar nav -->
+            </div>
+            <!-- end sidebar scrollbar -->
+        </div>
+        <div class="sidebar-bg"></div>
+
+
+        <script language=javascript>
+            function go(p) {
+                document.opts.page.value = p;
+                document.opts.submit();
+            }
+        </script>
+
+
+        <div id="content" class="content">
+            <!-- begin breadcrumb -->
+            <!-- end breadcrumb -->
+            <!-- begin page-header -->
+            <h1 class="page-header mb-3"><i class="fas fa-search-dollar"></i> Account History</h1>
+            <!-- end page-header -->
+            <!-- begin daterange-filter -->
+            <!-- end daterange-filter -->
+            <!-- begin row -->
+            <div class="row">
+                <!-- begin col-6 -->
+                <div class="col-xl-12">
+                    <!-- begin card -->
+                    <div class="card border-0 mb-3 overflow-hidden ">
+                        <!-- begin card-body -->
+                        <div class="card-body">
+                            <!-- begin row -->
+                            <form method=post name=opts><input type="hidden" name="form_id" value="16491761611513"><input type="hidden" name="form_token" value="4a231de3ddc2995e914d9a293e2f4fc5">
+                                <input type=hidden name=a value=history>
+                                <input type=hidden name=page value=1>
+                                <div class="row">
+                                    <!-- begin col-5 -->
+                                    <!---del-->
+                                    <style>
+                                        #code-cover-screen {
+                                            animation: scrollCodeIn 4s;
+                                            -webkit-animation-fill-mode: forwards;
+                                            animation-fill-mode: forwards;
+                                        }
+                                        
+                                        @keyframes scrollCodeIn {
+                                            0% {
+                                                transform: translateY(0);
+                                                opacity: 1;
+                                            }
+                                            100% {
+                                                transform: translateY(180px);
+                                                opacity: 1;
+                                            }
+                                        }
+                                        
+                                        #scrolling-code {
+                                            animation: scrollCode 3s 1.65s linear infinite;
+                                        }
+                                        
+                                        #scrolling-code-2 {
+                                            animation: scrollCode2 3s 1.65s linear infinite;
+                                            transform: translateY(87px);
+                                        }
+                                        
+                                        @keyframes scrollCode {
+                                            0% {
+                                                transform: translateY(0);
+                                                opacity: 1;
+                                            }
+                                            49.99% {
+                                                transform: translateY(-80px);
+                                                opacity: 1;
+                                            }
+                                            50% {
+                                                transform: translatey(87px);
+                                                opacity: 0;
+                                            }
+                                            50.01% {
+                                                opacity: 1;
+                                            }
+                                            100% {
+                                                transform: translateY(0);
+                                                opacity: 1;
+                                            }
+                                        }
+                                        
+                                        @keyframes scrollCode2 {
+                                            0% {
+                                                transform: translateY(87);
+                                                opacity: 1;
+                                            }
+                                            49.99% {
+                                                transform: translateY(0);
+                                                opacity: 1;
+                                            }
+                                            99.98% {
+                                                transform: translatey(-80px);
+                                                opacity: 1;
+                                            }
+                                            99.99% {
+                                                transform: translateY(87);
+                                                opacity: 0;
+                                            }
+                                            100% {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    </style>
+                                    <!--del-->
+                                    <!-- end col-5 -->
+                                    <!-- begin col-7 -->
+                                    <div class="col-xl-4 col-lg-4 col-12 mb-3">
+                                        <div class="row">
+                                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 text-right align-self-center">
+                                                From:
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                <select name=month_from class="form-control form-control-sm">
+<option style="background-color: #545454" value=1 >Jan
+<option style="background-color: #545454" value=2 >Feb
+<option style="background-color: #545454" value=3 >Mar
+<option style="background-color: #545454" value=4 selected>Apr
+<option style="background-color: #545454" value=5 >May
+<option style="background-color: #545454" value=6 >Jun
+<option style="background-color: #545454" value=7 >Jul
+<option style="background-color: #545454" value=8 >Aug
+<option style="background-color: #545454" value=9 >Sep
+<option style="background-color: #545454" value=10 >Oct
+<option style="background-color: #545454" value=11 >Nov
+<option style="background-color: #545454" value=12 >Dec
+</select>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                <select name=day_from class="form-control form-control-sm">
+<option style="background-color: #545454" value=1 >1
+<option style="background-color: #545454" value=2 >2
+<option style="background-color: #545454" value=3 >3
+<option style="background-color: #545454" value=4 >4
+<option style="background-color: #545454" value=5 selected>5
+<option style="background-color: #545454" value=6 >6
+<option style="background-color: #545454" value=7 >7
+<option style="background-color: #545454" value=8 >8
+<option style="background-color: #545454" value=9 >9
+<option style="background-color: #545454" value=10 >10
+<option style="background-color: #545454" value=11 >11
+<option style="background-color: #545454" value=12 >12
+<option style="background-color: #545454" value=13 >13
+<option style="background-color: #545454" value=14 >14
+<option style="background-color: #545454" value=15 >15
+<option style="background-color: #545454" value=16 >16
+<option style="background-color: #545454" value=17 >17
+<option style="background-color: #545454" value=18 >18
+<option style="background-color: #545454" value=19 >19
+<option style="background-color: #545454" value=20 >20
+<option style="background-color: #545454" value=21 >21
+<option style="background-color: #545454" value=22 >22
+<option style="background-color: #545454" value=23 >23
+<option style="background-color: #545454" value=24 >24
+<option style="background-color: #545454" value=25 >25
+<option style="background-color: #545454" value=26 >26
+<option style="background-color: #545454" value=27 >27
+<option style="background-color: #545454" value=28 >28
+<option style="background-color: #545454" value=29 >29
+<option style="background-color: #545454" value=30 >30
+<option style="background-color: #545454" value=31 >31
+</select></div>
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                                <select name=year_from class="form-control form-control-sm">
+<option style="background-color: #545454" value=2021 >2021
+<option style="background-color: #545454" value=2022 selected>2022
+</select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-12 mb-3">
+                                        <div class="row">
+                                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 text-right align-self-center">
+                                                To:
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                <select name=month_to class="form-control form-control-sm">
+<option style="background-color: #545454" value=1 >Jan
+<option style="background-color: #545454" value=2 >Feb
+<option style="background-color: #545454" value=3 >Mar
+<option style="background-color: #545454" value=4 selected>Apr
+<option style="background-color: #545454" value=5 >May
+<option style="background-color: #545454" value=6 >Jun
+<option style="background-color: #545454" value=7 >Jul
+<option style="background-color: #545454" value=8 >Aug
+<option style="background-color: #545454" value=9 >Sep
+<option style="background-color: #545454" value=10 >Oct
+<option style="background-color: #545454" value=11 >Nov
+<option style="background-color: #545454" value=12 >Dec
+</select></div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                <select name=day_to class="form-control form-control-sm">
+<option style="background-color: #545454" value=1 >1
+<option style="background-color: #545454" value=2 >2
+<option style="background-color: #545454" value=3 >3
+<option style="background-color: #545454" value=4 >4
+<option style="background-color: #545454" value=5 selected>5
+<option style="background-color: #545454" value=6 >6
+<option style="background-color: #545454" value=7 >7
+<option style="background-color: #545454" value=8 >8
+<option style="background-color: #545454" value=9 >9
+<option style="background-color: #545454" value=10 >10
+<option style="background-color: #545454" value=11 >11
+<option style="background-color: #545454" value=12 >12
+<option style="background-color: #545454" value=13 >13
+<option style="background-color: #545454" value=14 >14
+<option style="background-color: #545454" value=15 >15
+<option style="background-color: #545454" value=16 >16
+<option style="background-color: #545454" value=17 >17
+<option style="background-color: #545454" value=18 >18
+<option style="background-color: #545454" value=19 >19
+<option style="background-color: #545454" value=20 >20
+<option style="background-color: #545454" value=21 >21
+<option style="background-color: #545454" value=22 >22
+<option style="background-color: #545454" value=23 >23
+<option style="background-color: #545454" value=24 >24
+<option style="background-color: #545454" value=25 >25
+<option style="background-color: #545454" value=26 >26
+<option style="background-color: #545454" value=27 >27
+<option style="background-color: #545454" value=28 >28
+<option style="background-color: #545454" value=29 >29
+<option style="background-color: #545454" value=30 >30
+<option style="background-color: #545454" value=31 >31
+</select>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                                <select name=year_to class="form-control form-control-sm">
+<option style="background-color: #545454" value=2021 >2021
+<option style="background-color: #545454" value=2022 selected>2022
+</select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4 col-12">
+                                        <!-- begin title -->
+                                        <div class="row">
+                                            <div class="col-md-5 col-5">
+                                                <select name="type" onchange="document.opts.submit();" class="form-control form-control-sm">
+ <option style="background-color: #545454" value="">Transaction</option>
+<option style="background-color: #545454" value="">All transactions</option>
+<option value="deposit" >Deposit</option>
+<option value="withdrawal" >Withdrawal</option>
+<option value="earning" >Earning</option>
+<option value="commissions" >Referral commission</option>
+   </select> </div>
+                                            <div class="col-md-4 col-4">
+                                                <select name="ec" class="form-control form-control-sm">
+     <option style="background-color: #545454" value=-1>All eCurrencies</option>
+ <option value=1000 >Bitcoin</option>
+   </select>
+                                            </div>
+
+                                            <div class="col-md-3 col-3">
+                                                <input type=submit class="btn btn-teal btn-sm m-r-5 m-b-5" value="Show">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- end col-7 -->
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end card-body -->
+                    </div>
+                    <!-- end card -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <!-- begin panel-heading -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Transactions list</h4>
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                        <!-- end panel-heading -->
+                        <!-- begin alert -->
+                        <!-- end alert -->
+                        <!-- begin panel-body -->
+                        <div class="panel-body p-0">
+                            <table id="table-responsive" class="table table-hover table-bordere table-td-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">Date</th>
+                                        <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">Transaction</th>
+                                        <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeA">
+
+                                        <td colspan="3">
+                                            No transactions found
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=3>&nbsp;</td>
+
+                                        <tr>
+                                            <td colspan=2>Total:</td>
+                                            <td align=right><b>$ 0.00</b></td>
+                                        </tr>
+                            </table>
+
+                            </tbody>
+                            </table>
+                        </div>
+                        <!-- end panel-body -->
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <style>
+                        .page-item-active .page-link {
+                            background-color: #01caca;
+                        }
+                    </style>
+                    <ul class="pagination">
+                        <li class="page-item"><a class="prev page-link disabled">&lt;&lt;</a></li>
+                        <li class="page-item active"><a class="page-link">1</a></li>
+                        <li class="page-item"><a class="next page-link disabled">&gt;&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col-6 -->
+    <!-- begin col-6 -->
+    <!-- end #content -->
+    <!-- begin theme-panel -->
+    <!-- end theme-panel -->
+    <!-- begin scroll to top btn -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-teal btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+    <!-- end scroll to top btn -->
+    <!-- end page container -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{% static 'app.min2.js' %}"></script>
+    <script src="{% static 'transparent.min2.js' %}"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="{% static 'd3.min.js' %}"></script>
+    <script src="{% static 'nv.d3.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap-world-mill.js' %}"></script>
+    <script src="{% static 'apexcharts.min.js' %}"></script>
+    <script src="{% static 'moment.min.js' %}"></script>
+    <script src="{% static 'daterangepicker.js' %}"></script>
+    <script src="{% static 'dashboard-v3.js' %}"></script>
+    <script src="{% static 'jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'responsive.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'buttons.colVis.min.js' %}"></script>
+    <script src="{% static 'buttons.flash.min.js' %}"></script>
+    <script src="{% static 'buttons.html5.min.js' %}"></script>
+    <script src="{% static 'buttons.print.min.js' %}"></script>
+    <script src="{% static 'pdfmake.min.js' %}"></script>
+    <script src="{% static 'vfs_fonts.js' %}"></script>
+    <script src="{% static 'jszip.min.js' %}"></script>
+    <script src="{% static 'table-manage-buttons.demo.js' %}"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+</body>
+
+</html>

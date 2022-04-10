@@ -1,0 +1,552 @@
+{% load static %}
+<script src="//code.tidio.co/ewmocfvcluaifuqzjjezguqnbvju3c6g.js" async>
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bitcointradinginc.com</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="{% static 'app.min0523.css' %}" rel="stylesheet" />
+    <!----------------- www.bitcoinstart.website ----------->
+    <meta name="designer" href="https://www.bitcoinstart.website">
+
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="{% static 'jquery-jvectormap.css' %}" rel="stylesheet" />
+    <link href="{% static 'nv.d3.css' %}" rel="stylesheet" />
+    <link href="{% static 'daterangepicker.css' %}" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="{% static 'bootstrap-social.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3233d881f8.js" crossorigin="anonymous"></script>
+    <link href="{% static 'switchery.min.css' %}" rel="stylesheet" />
+
+
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+    <meta property="og:title" content="Bitcointradinginc.com.">
+    <meta property="og:description" content="Advanced Asset Management">
+    <meta property="og:image" content="./facebook.jpg">
+    <meta property="og:type" content="website" />
+
+</head>
+
+<body style="background-image: url(../static/mememe.jfif);">
+    <!-- begin page-cover -->
+    <div class="page-cover"></div>
+    <!-- end page-cover -->
+    <!-- begin #page-loader -->
+    <!-- <div id="page-loader" class="fade show">
+        <span class="spinner"></span>
+    </div> -->
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <!-- begin #header -->
+        <div id="header" class="header navbar-default">
+            <!-- begin navbar-header -->
+            <div class="navbar-header">
+                <a href="?a=home" class="navbar-brand"><img src="{% static 'log002.png' %}"> </a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- end navbar-header -->
+            <!-- begin header-nav -->
+            <ul class="navbar-nav navbar-right">
+                <li class="navbar-form">
+                    <form action="" method="POST" name="search_form"><input type="hidden" name="form_id" value="16491926806296"><input type="hidden" name="form_token" value="942815da2c0228de256bfebbb782bc56"><input type="hidden" name="form_id" value="16082437449329"><input type="hidden" name="form_token"
+                            value="388714aa74bd9a5b6aad5065ee56187e">
+                        <div class="form-group">
+                            <div class="badge badge-dark" style="margin-top: 2px; margin-bottom: auto; padding: 10px; font-size: 0.7rem" id="clockbox"></div>
+
+                            <script type="text/javascript">
+                                var tmonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                                function GetClock() {
+                                    var tzOffset = +0; //set this to the number of hours offset from UTC
+
+                                    var d = new Date();
+                                    var dx = d.toGMTString();
+                                    dx = dx.substr(0, dx.length - 3);
+                                    d.setTime(Date.parse(dx))
+                                    d.setHours(d.getHours() + tzOffset);
+                                    var nmonth = d.getMonth(),
+                                        ndate = d.getDate(),
+                                        nyear = d.getFullYear();
+
+                                    var nhour = d.getHours(),
+                                        nmin = d.getMinutes(),
+                                        nsec = d.getSeconds(),
+                                        ap;
+
+                                    if (nhour == 0) {
+                                        ap = " AM";
+                                        nhour = 12;
+                                    } else if (nhour < 12) {
+                                        ap = " AM";
+                                    } else if (nhour == 12) {
+                                        ap = " PM";
+                                    } else if (nhour > 12) {
+                                        ap = " PM";
+                                        nhour -= 12;
+                                    }
+
+                                    if (nmin <= 9) nmin = "0" + nmin;
+                                    if (nsec <= 9) nsec = "0" + nsec;
+
+                                    var clocktext = "" + tmonth[nmonth] + "-" + ndate + "-" + nyear + ", " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                                    document.getElementById('clockbox').innerHTML = clocktext;
+                                }
+
+                                GetClock();
+                                setInterval(GetClock, 1000);
+                            </script>
+
+
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown navbar-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="{% static 'myuser.jpg' %}" alt="" /> <span class="d-none d-md-inline"> </span> <b class="caret"></b> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="?a=edit_account" class="dropdown-item"><i class="fa fa-edit"></i>&nbsp;&nbsp;Edit Account</a>
+                        <a href="?a=security" class="dropdown-item"><i class="fa fa-shield-alt"></i>&nbsp;&nbsp;2F Authentication</a>
+                        <a href="{% url 'main:logout' %}" class="dropdown-item"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- begin sidebar scrollbar -->
+            <div data-scrollbar="true" data-height="100%">
+                <!-- begin sidebar user -->
+
+                <!-- end sidebar user -->
+                <!-- begin sidebar nav -->
+                <ul class="nav">
+                    <li class="nav-header">Navigation</li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="fa fa-th-large"></i> <span>Dashboard</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:deposit' %}"> <i class="fas fa-donate"></i> <span>Make a Deposit</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:withdraw' %}"> <i class="fas fa-hand-holding-usd"></i> <span>Withdrawal</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="far fa-money-bill-alt"></i> <span>Active Deposits</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:history' %}"> <i class="fas fa-search-dollar"></i> <span>Account History</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="far fa-handshake"></i> <span>Referral Program</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="fas fa-calculator"></i> <span>Profit Calculator</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:faq' %}"> <i class="far fa-question-circle"></i> <span>FAQ</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:support' %}"> <i class="fas fa-headset"></i> <span>Support</span> </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a>
+                    </li>
+                    <!-- end sidebar minify button -->
+                </ul>
+                <!-- end sidebar nav -->
+            </div>
+            <!-- end sidebar scrollbar -->
+        </div>
+        <div class="sidebar-bg"></div>
+        <div id="content" class="content">
+            <!-- begin breadcrumb -->
+            <!-- end breadcrumb -->
+            <!-- begin page-header -->
+            <h1 class="page-header mb-3"><i class="far fa-question-circle"></i> Frequently Asked Questions</h1>
+            <!-- end page-header -->
+            <!-- begin daterange-filter -->
+            <!-- end daterange-filter -->
+            <!-- begin row -->
+            <div class="row">
+                <div class="col-xl-6">
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <!-- begin panel-heading -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">General Questions</h4>
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                        <!-- end panel-heading -->
+                        <!-- begin panel-body -->
+                        <div class="panel-body">
+                            <div id="accordion1" class="accordion">
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center" data-toggle="collapse" data-target="#collapse1">
+                                        <i class="fa fa-circle fa-fw text-indigo mr-2 f-s-8"></i> How to start earning money using Bitcointradinginc.com?
+                                    </div>
+                                    <div id="collapse1" class="collapse show" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            It is very easy. This can be broken down into 3 basic steps: 1. This account registration is quick and will take about 2 minutes. 2. To use the investment plan you need to make a deposit, depending on the amount you can choose from three investment plans:
+                                            Basic, Premium or Supreme. Step 3 is just waiting for your daily profits, paying them to your wallet / account or reinvesting to accumulate profits in the following days. You can also make money by recommending
+                                            our site to others through a referral program.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse2">
+                                        <i class="fa fa-circle fa-fw text-indigo mr-2 f-s-8"></i> Do I need any trading skills?
+                                    </div>
+                                    <div id="collapse2" class="collapse" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            Absolutely not, our asset management system works in such a way that our traders manage your funds and professionally invest them, providing you with a guaranteed daily profit. This is 100% passive income, regardless of your knowledge or skills.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse3">
+                                        <i class="fa fa-circle fa-fw text-indigo mr-2 f-s-8"></i> Are my funds safe at Bitcointradinginc.com?
+                                    </div>
+                                    <div id="collapse3" class="collapse" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            Definitely yes, AX TRADER LTD is an officially registered company based in London (UK). You can check the company registration by clicking
+                                            <a href="https://find-and-update.company-information.service.gov.uk/company/12967024" targer="_blank">THIS LINK</a>. We have all the necessary permits to conduct our business. Your electronic funds are stored
+                                            using the highest standards and cannot be lost.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse4">
+                                        <i class="fa fa-circle fa-fw text-indigo mr-2 f-s-8"></i> How does the referral system work?
+                                    </div>
+                                    <div id="collapse4" class="collapse" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            With our referral program, you can earn money by advertising our system to others. We offer 3-level referral program with 5%-2%-1% commission. Try to convince as many people as possible, each new person is an additional income for you. Profits from the
+                                            affiliate program are added immediately to your account. You can withdraw them immediately or use them to make your own (or next) deposit and earn even more this way.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                            </div>
+                        </div>
+                        <!-- end panel-body -->
+                        <!-- begin hljs-wrapper -->
+                        <!-- end hljs-wrapper -->
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- begin col-6 -->
+                <div class="col-xl-6">
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-2">
+                        <!-- begin panel-heading -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Account Questions</h4>
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                        <!-- end panel-heading -->
+                        <!-- begin panel-body -->
+                        <div class="panel-body">
+                            <div id="accordion2" class="accordion">
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center" data-toggle="collapse" data-target="#collapse5">
+                                        <i class="fa fa-circle fa-fw text-orange mr-2 f-s-8"></i> Can I change my account data?
+                                    </div>
+                                    <div id="collapse5" class="collapse show" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            Yes, from your user panel you can change your full name, password, change 2 Factor Authentication settings, and change wallets / withdrawal addresses.
+                                            <br> Any changes to your account require confirmation with a verification code sent to your email. Changes will be made immediately after entering the code.
+                                            <br>If you want to make other unlisted changes or correct a mistake please contact our support team, which is available 24/7.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse6">
+                                        <i class="fa fa-circle fa-fw text-orange mr-2 f-s-8"></i> What to do if I forget my account password?
+                                    </div>
+                                    <div id="collapse6" class="collapse" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            Under the login window you will find the option "Forgot password". Enter your E-Mail or username in the form. After a while, you will receive an activation link to your e-mail address.
+                                            <br> When you do this, you will receive another email with your username and temporary password. After logging in, we recommend that you change the password in the "Edit Account" section to strong ones containing
+                                            upper / lower case letters, numbers / or special characters.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse7">
+                                        <i class="fa fa-circle fa-fw text-orange mr-2 f-s-8"></i> Can I Register more than one account?
+                                    </div>
+                                    <div id="collapse7" class="collapse" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            Yes, you can register more than one account if you need one for your own use. Your household members can also use one IP address serving different accounts. Please use different usernames and different e-mail addresses.
+                                            <br> Very important: not to register empty accounts in the referral program, only to get a commission on your own deposits. Accounts in the structure belonging to one person must have an active deposit. Using
+                                            the referral program in a manner inconsistent with its intended use may result in the blocking of all accounts.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse8">
+                                        <i class="fa fa-circle fa-fw text-orange o mr-2 f-s-8"></i> Can I use Bitcointradinginc.com on mobile devices?
+                                    </div>
+                                    <div id="collapse8" class="collapse" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            Yes, our website is fully responsive and adapted to all kinds of devices. You can perform all operations using your smartphone or tablet, and read all posted content.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                            </div>
+                        </div>
+                        <!-- end panel-body -->
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end col-6 -->
+                <!-- begin col-6 -->
+                <!-- end col-6 -->
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-3">
+                        <!-- begin panel-heading -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Questions about Deposits</h4>
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                        <!-- end panel-heading -->
+                        <!-- begin panel-body -->
+                        <div class="panel-body">
+                            <div id="accordion3" class="accordion">
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center" data-toggle="collapse" data-target="#collapse9">
+                                        <i class="fa fa-circle fa-fw text-teal mr-2 f-s-8"></i> What minimum and maximum amount can I invest?
+                                    </div>
+                                    <div id="collapse9" class="collapse show" data-parent="#accordion3">
+                                        <div class="card-body">
+                                            Minimum deposit amount:
+                                            <br> for the Basic plan it is $ 10, for the Premium plan it is $ 2,000, for the Supreme Plan is $ 10,000.
+                                            <br> If you make a deposit using cryptocurrencies, the declared amount will be converted at the current market exchange rate.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse10">
+                                        <i class="fa fa-circle fa-fw text-teal  mr-2 f-s-8"></i> Can I own more than one deposit?
+                                    </div>
+                                    <div id="collapse10" class="collapse" data-parent="#accordion3">
+                                        <div class="card-body">
+                                            Yes of course. You can have an unlimited number of deposits. You can make multiple deposits in different investment plans and using different payment methods. Each deposit is treated as a separate investment plan with a separate duration.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse11">
+                                        <i class="fa fa-circle fa-fw text-teal  mr-2 f-s-8"></i> How long after the transfer will the deposit be activated?
+                                    </div>
+                                    <div id="collapse11" class="collapse" data-parent="#accordion3">
+                                        <div class="card-body">
+                                            Deposit made using PerfectMoney is activated immediately. Deposits in cryptocurrencies like Bitcoin, Ethereum, Litecoin ... etc are added after the third confirmation from the Blockchain network. Depending on the cryptocurrency and the transfer fee, it
+                                            may take up to 1 hour.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse12">
+                                        <i class="fa fa-circle fa-fw text-teal  mr-2 f-s-8"></i> Can I cancel my Deposit and withdraw funds?
+                                    </div>
+                                    <div id="collapse12" class="collapse" data-parent="#accordion3">
+                                        <div class="card-body">
+                                            After the first 24 hours of making a deposit, you can cancel it and withdraw funds. The amount you cancel will be charged a fee of 10%. Once your deposit is canceled, the funds will be returned to your balance from where you can withdraw. Deposits are
+                                            returned free of charge upon completion of the investment plan (after 30, 40 or 50 days depending on the plan).
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                            </div>
+                        </div>
+                        <!-- end panel-body -->
+                        <!-- begin hljs-wrapper -->
+                        <!-- end hljs-wrapper -->
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- begin col-6 -->
+                <div class="col-xl-6">
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-4">
+                        <!-- begin panel-heading -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Questions about Withdrawals</h4>
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                        <!-- end panel-heading -->
+                        <!-- begin panel-body -->
+                        <div class="panel-body">
+                            <div id="accordion4" class="accordion">
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center" data-toggle="collapse" data-target="#collapse13">
+                                        <i class="fa fa-circle fa-fw text-green mr-2 f-s-8"></i> What is the minimum and maximum withdrawal amount?
+                                    </div>
+                                    <div id="collapse13" class="collapse show" data-parent="#accordion4">
+                                        <div class="card-body">
+                                            Minimum withdrawal amount:
+                                            <br> for PerfectMoney: $2, for Cryptocurrencies: $3
+                                            <br> There is no maximum withdrawal amount. If you make a withdrawal using cryptocurrencies, the declared amount will be converted at the current market exchange rate.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse14">
+                                        <i class="fa fa-circle fa-fw text-green mr-2 f-s-8"></i> How long do I have to wait for withdrawal?
+                                    </div>
+                                    <div id="collapse14" class="collapse" data-parent="#accordion4">
+                                        <div class="card-body">
+                                            The waiting time for withdrawal does not exceed 24 hours on all days of the year (including weekends and holidays).
+                                            <br> In our 24/7 work, our operators always make payouts as quickly as possible.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse15">
+                                        <i class="fa fa-circle fa-fw text-green mr-2 f-s-8"></i> Where do I add my accounts to withdrawals?
+                                    </div>
+                                    <div id="collapse15" class="collapse" data-parent="#accordion4">
+                                        <div class="card-body">
+                                            You must be logged in to your account to add accounts for payouts. Then go to the "Editing Account" section where you will find fields to be completed with your private wallet / account addresses. Adding an account must be approved with a verification
+                                            code that you will receive by email. After entering the verification code, the wallet addresses will be saved in your user account
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <div class="card bg-dark text-white">
+                                    <div class="card-header bg-dark-darker pointer-cursor d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse16">
+                                        <i class="fa fa-circle fa-fw text-green mr-2 f-s-8"></i> Do you charge any fees for withdrawals?
+                                    </div>
+                                    <div id="collapse16" class="collapse" data-parent="#accordion4">
+                                        <div class="card-body">
+                                            No, we do not charge any fees for withdrawals from your balance. Cryptocurrency transfers, as well as PerfectMoney are paid on our side. At the same time, we reserve that we have no influence on the fees charged by third companies / cryptocurrency exchanges
+                                            from their users (e.g. commissions for incoming transfers). We strongly recommend using private cryptocurrency wallets, such as EXODUS, Jaxx Liberty, Electrum, Atomic Wallet, or hardware wallets such as Trezor
+                                            or Ledger.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                                <!-- begin card -->
+                                <!-- end card -->
+                            </div>
+                        </div>
+                        <!-- end panel-body -->
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end col-6 -->
+                <!-- begin col-6 -->
+                <!-- end col-6 -->
+            </div>
+            <!-- end row -->
+            <!-- begin row -->
+            <!-- end row -->
+            <!-- begin row -->
+            <!-- end row -->
+        </div>
+        <!-- end #content -->
+        <!-- begin theme-panel -->
+        <!-- end theme-panel -->
+        <!-- begin scroll to top btn -->
+        <a href="javascript:;" class="btn btn-icon btn-circle btn-teal btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+        <!-- end scroll to top btn -->
+    </div>
+    <!-- end page container -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{% static 'app.min2.js' %}"></script>
+    <script src="{% static 'transparent.min2.js' %}"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="{% static 'd3.min.js' %}"></script>
+    <script src="{% static 'nv.d3.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap-world-mill.js' %}"></script>
+    <script src="{% static 'apexcharts.min.js' %}"></script>
+    <script src="{% static 'moment.min.js' %}"></script>
+    <script src="{% static 'daterangepicker.js' %}"></script>
+    <script src="{% static 'dashboard-v3.js' %}"></script>
+    <script src="{% static 'app.min.js' %}"></script>
+    <script src="{% static 'transparent.min.js' %}"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+</body>
+
+</html>

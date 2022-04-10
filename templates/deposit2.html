@@ -1,0 +1,504 @@
+{% load static %}
+<script src="//code.tidio.co/ewmocfvcluaifuqzjjezguqnbvju3c6g.js" async>
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bitcointradinginc.com</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="{% static 'app.min0522.css' %}" rel="stylesheet" />
+    <!----------------- www.bitcoinstart.website ----------->
+    <meta name="designer" href="https://www.bitcoinstart.website">
+
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="{% static 'jquery-jvectormap.css' %}" rel="stylesheet" />
+    <link href="{% static 'nv.d3.css' %}" rel="stylesheet" />
+    <link href="{% static 'daterangepicker.css' %}" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="{% static 'bootstrap-social.css' %}" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/3233d881f8.js" crossorigin="anonymous"></script>
+    <link href="{% static 'switchery.min.css' %}" rel="stylesheet" />
+
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+    <meta property="og:title" content="Bitcointradinginc.com.">
+    <meta property="og:description" content="Advanced Asset Management">
+    <meta property="og:image" content="{% static 'facebook.jpg' %}">
+    <meta property="og:type" content="website" />
+
+</head>
+
+<body style="background-image: url(../static/mememe.jfif);">
+    <!-- begin page-cover -->
+    <div class="page-cover"></div>
+    <!-- end page-cover -->
+    <!-- begin #page-loader -->
+    <!-- <div id="page-loader" class="fade show">
+        <span class="spinner"></span>
+    </div> -->
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <!-- begin #header -->
+        <div id="header" class="header navbar-default">
+            <!-- begin navbar-header -->
+            <div class="navbar-header">
+                <a href="{% url 'main:home' %}" class="navbar-brand"><img src="{% static 'log002.png' %}"> </a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- end navbar-header -->
+            <!-- begin header-nav -->
+            <ul class="navbar-nav navbar-right">
+                <li class="navbar-form">
+                    <form action="" method="POST" name="search_form"><input type="hidden" name="form_id" value="16491748606531"><input type="hidden" name="form_token" value="29c0c4b57c0d9e8ca3c00c850b70377a"><input type="hidden" name="form_id" value="16082437449329"><input type="hidden" name="form_token"
+                            value="388714aa74bd9a5b6aad5065ee56187e">
+                        <div class="form-group">
+                            <div class="badge badge-dark" style="margin-top: 2px; margin-bottom: auto; padding: 10px; font-size: 0.7rem" id="clockbox"></div>
+
+                            <script type="text/javascript">
+                                var tmonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                                function GetClock() {
+                                    var tzOffset = +0; //set this to the number of hours offset from UTC
+
+                                    var d = new Date();
+                                    var dx = d.toGMTString();
+                                    dx = dx.substr(0, dx.length - 3);
+                                    d.setTime(Date.parse(dx))
+                                    d.setHours(d.getHours() + tzOffset);
+                                    var nmonth = d.getMonth(),
+                                        ndate = d.getDate(),
+                                        nyear = d.getFullYear();
+
+                                    var nhour = d.getHours(),
+                                        nmin = d.getMinutes(),
+                                        nsec = d.getSeconds(),
+                                        ap;
+
+                                    if (nhour == 0) {
+                                        ap = " AM";
+                                        nhour = 12;
+                                    } else if (nhour < 12) {
+                                        ap = " AM";
+                                    } else if (nhour == 12) {
+                                        ap = " PM";
+                                    } else if (nhour > 12) {
+                                        ap = " PM";
+                                        nhour -= 12;
+                                    }
+
+                                    if (nmin <= 9) nmin = "0" + nmin;
+                                    if (nsec <= 9) nsec = "0" + nsec;
+
+                                    var clocktext = "" + tmonth[nmonth] + "-" + ndate + "-" + nyear + ", " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                                    document.getElementById('clockbox').innerHTML = clocktext;
+                                }
+
+                                GetClock();
+                                setInterval(GetClock, 1000);
+                            </script>
+
+
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown navbar-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="{% static 'myuser.jpg' %}" alt="" /> <span class="d-none d-md-inline">mimi22 </span> <b class="caret"></b> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item"><i class="fa fa-edit"></i>&nbsp;&nbsp;Edit Account</a>
+                        <a href="#" class="dropdown-item"><i class="fa fa-shield-alt"></i>&nbsp;&nbsp;2F Authentication</a>
+                        <a href="{% url 'main:logout' %}" class="dropdown-item"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- begin sidebar scrollbar -->
+            <div data-scrollbar="true" data-height="100%">
+                <!-- begin sidebar user -->
+
+                <!-- end sidebar user -->
+                <!-- begin sidebar nav -->
+                <ul class="nav">
+                    <li class="nav-header">Navigation</li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="fa fa-th-large"></i> <span>Dashboard</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:deposit' %}"> <i class="fas fa-donate"></i> <span>Make a Deposit</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:withdraw' %}"> <i class="fas fa-hand-holding-usd"></i> <span>Withdrawal</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:profile' %}"> <i class="far fa-money-bill-alt"></i> <span>Active Deposits</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:history' %}"> <i class="fas fa-search-dollar"></i> <span>Account History</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:faq' %}"> <i class="far fa-question-circle"></i> <span>FAQ</span> </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'main:support' %}"> <i class="fas fa-headset"></i> <span>Support</span> </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a>
+                    </li>
+                    <!-- end sidebar minify button -->
+                </ul>
+                <!-- end sidebar nav -->
+            </div>
+            <!-- end sidebar scrollbar -->
+        </div>
+        <div class="sidebar-bg"></div>
+        <div id="content" class="content">
+            <!-- begin breadcrumb -->
+            <!-- end breadcrumb -->
+            <!-- begin page-header -->
+            <h1 class="page-header mb-3"><i class="fas fa-donate" aria-hidden="true"></i> Make a Deposit</h1>
+            <!-- end page-header -->
+            <!-- begin daterange-filter -->
+            <!-- end daterange-filter -->
+            <!-- begin row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="invoice">
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- begin invoice-content -->
+                        <div class="invoice-content">
+                            <!-- begin table-responsive -->
+                            <div class="table-responsive">
+                                <table class="table table-invoice table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-teal" colspan="2">DEPOSIT CONFIRMATION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Plan:</th>
+                                            <td>10% after 24 hours - $100 to earn $110</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Profit:</th>
+                                            <td>10% after 1 day</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Principal Return:</th>
+                                            <td>No (included in profit)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Principal Withdraw:</th>
+                                            <td>
+                                                Not available </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Credit Amount:</th>
+                                            <td>$100.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Deposit Fee:</th>
+                                            <td>0.00% + $0.00 (min. $0.00 max. $0.00)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Debit Amount:</th>
+                                            <td>${{ amount }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th> Debit Amount:</th>
+                                            <td>{{ amount }}</td>
+                                        </tr>
+                                        <th></th>
+                                        <th class="text-center" width="30%"></th>
+                                        </tr>
+                                    </tbody>
+                                    <thead>
+                                    </thead>
+                                </table>
+                            </div>
+
+
+
+
+
+
+
+                            <!-- begin invoice-company -->
+                            <!-- end invoice-company -->
+                            <!-- begin invoice-header -->
+
+                            <!-- end invoice-header -->
+                            <!-- begin invoice-price -->
+                            <div class="invoice-price">
+                                <div class="invoice-price-left">
+                                    <div class="invoice-price-row h6 text-left" style="line-height: 1.2rem">
+                                        Please send your payments to this account: <b>1LVG5DCRgq7SGeiLNtuEJuozN8PrMZwzCQ</b>
+
+                                        <!--  Please send exact amount in Cryptocurrencies or more.
+                                       <br>Please do not use ETH Contract addresses as payment. Only regular ETH wallets. -->
+                                    </div>
+                                </div>
+                                <div class="invoice-price-right">
+                                    <small>DEPOSIT  AMOUNT</small>
+                                    <span class="pt-2 h2 f-w-600"> ${{ amount }} </span>
+                                </div>
+                            </div>
+                            <!-- end invoice-price -->
+
+
+
+                            <!--
+Please send your payments to this account: <b>1LVG5DCRgq7SGeiLNtuEJuozN8PrMZwzCQ</b>
+-->
+                            <br><br>
+
+                            <div class="text-center bg-transparent">
+
+
+                                <!-- <h4 class="pt-2 pb-3 text-white">Redirect to Make a Payment</h4>
+   -->
+
+
+                                <div class="text-center">
+                                    <address class="m-t-5"> <h5 style="line-height: 2rem">
+<form name=spend method="POST" action="{% url 'main:deposit2' %}"><input type="hidden" name="form_id" value="16491748606531">
+{% csrf_token %}
+    <input type="hidden" name="form_token" value="29c0c4b57c0d9e8ca3c00c850b70377a">
+<input type=hidden name=a value=deposit>
+<input type=hidden name=action value=confirm>
+<input type=hidden name=type value=process_1000>
+<input type=hidden name=h_id value=1>
+<input type=hidden name=compound value=>
+<INPUT type=hidden name=amount value="100.00">
+<table cellspacing=0 cellpadding=2 border=0>
+<tr>
+ <td colspan=2><b>Required Information:</b></td>
+</tr>
+<tr>
+ <td>Full Name</td>
+ <td><input type="text" name="fields[1]" value="" class=inpts></td>
+</tr>
+</table>
+
+<br><input type=submit value="Save" class="btn btn-lg btn-teal no-caret"> &nbsp;
+<input type=button class=sbmt value="Cancel" onclick="document.location='?a=deposit'">
+</form>
+ </h5></address>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+                        <!-- end invoice-content -->
+                        <!-- begin invoice-note -->
+                        <!-- end invoice-note -->
+                        <!-- begin invoice-footer -->
+                        <!-- end invoice-footer -->
+                    </div>
+                </div>
+                <!-- DEL -->
+                <!-- DEL -->
+                <!-- DEL -->
+                <!-- DEL -->
+            </div>
+        </div>
+    </div>
+    <style>
+        .btc6,
+        .btc4,
+        .litecoin4,
+        .doge4,
+        .bch4,
+        .dash4>i {
+            display: inline-block;
+            /* For IE11/ MS Edge bug */
+            pointer-events: none;
+            text-decoration: none;
+        }
+    </style>
+    <style>
+        .deposit-process {
+            margin-right: 15px;
+            color: #fff;
+            font-weight: 600;
+            background-color: #01caca;
+            border-color: #01caca;
+            -webkit-box-shadow: 0;
+            box-shadow: 0;
+            padding: .5rem 1rem;
+            font-size: .875rem;
+            line-height: 1.8;
+            border-radius: 6px;
+        }
+        
+        .deposit-process:hover {
+            color: #fff;
+            background-color: #019797;
+            border-color: #019797;
+        }
+        
+        .deposit-process.focus,
+        .deposit-process:focus {
+            color: #fff;
+            background-color: #019797;
+            border-color: #019797;
+            box-shadow: 0 0 0 0 rgba(39, 210, 210, .5);
+        }
+        
+        .deposit-process.disabled,
+        .deposit-process:disabled {
+            color: #fff;
+            background-color: #019797;
+            border-color: #019797;
+        }
+        
+        .deposit-process:not(:disabled):not(.disabled).active,
+        .deposit-process:not(:disabled):not(.disabled):active,
+        .show>.deposit-process.dropdown-toggle {
+            color: #fff;
+            background-color: #019797;
+            border-color: #019797;
+        }
+        
+        .deposit-process:not(:disabled):not(.disabled).active:focus,
+        .deposit-process:not(:disabled):not(.disabled):active:focus,
+        .show>..deposit-process-toggle:focus {
+            color: #fff;
+            background-color: #019797;
+            border-color: #019797;
+        }
+    </style>
+
+    <style>
+        .deposit-cancel {
+            margin-left: 15px;
+            font-weight: 500;
+            border-color: transparent;
+            background-color: rgba(255, 255, 255, .25);
+            -webkit-box-shadow: 0;
+            box-shadow: 0;
+            color: #fff;
+            padding: .5rem 1rem;
+            font-size: .875rem;
+            line-height: 1.8;
+            border-radius: 6px;
+        }
+        
+        .deposit-cancel:hover {
+            color: #212529;
+            background-color: rgba(255, 255, 255, .5);
+            border-color: transparent;
+        }
+        
+        .deposit-cancel.focus,
+        .deposit-cancel:focus {
+            color: #212529;
+            background-color: rgba(255, 255, 255, .5);
+            border-color: transparent;
+            box-shadow: 0 0 0 0 rgba(33, 37, 41, .5);
+        }
+        
+        .deposit-cancel.disabled,
+        .deposit-cancel:disabled {
+            cursor: pointer;
+        }
+        
+        .deposit-cancel:not(:disabled):not(.disabled).active,
+        .deposit-cancel:not(:disabled):not(.disabled):active,
+        .show>.deposit-cancel.dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .deposit-cancel:not(:disabled):not(.disabled).active:focus,
+        .deposit-cancel:not(:disabled):not(.disabled):active:focus,
+        .show>..deposit-cancel-toggle:focus {
+            cursor: pointer;
+        }
+    </style>
+    <!-- end col-6 -->
+    <!-- begin col-6 -->
+    <!-- end #content -->
+    <!-- begin theme-panel -->
+    <!-- end theme-panel -->
+    <!-- begin scroll to top btn -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-teal btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    <!-- end scroll to top btn -->
+    <!-- end page container -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{% static 'app.min2.js' %}"></script>
+    <script src="{% static 'transparent.min2.js' %}"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="{% static 'd3.min.js' %}"></script>
+    <script src="{% static 'nv.d3.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap.min.js' %}"></script>
+    <script src="{% static 'jquery-jvectormap-world-mill.js' %}"></script>
+    <script src="{% static 'apexcharts.min.js' %}"></script>
+    <script src="{% static 'moment.min.js' %}"></script>
+    <script src="{% static 'daterangepicker.js' %}"></script>
+    <script src="{% static 'dashboard-v3.js' %}"></script>
+    <script src="{% static 'jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'responsive.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'buttons.colVis.min.js' %}"></script>
+    <script src="{% static 'buttons.flash.min.js' %}"></script>
+    <script src="{% static 'buttons.html5.min.js' %}"></script>
+    <script src="{% static 'buttons.print.min.js' %}"></script>
+    <script src="{% static 'pdfmake.min.js' %}"></script>
+    <script src="{% static 'vfs_fonts.js' %}"></script>
+    <script src="{% static 'jszip.min.js' %}"></script>
+    <script src="{% static 'table-manage-buttons.demo.js' %}"></script>
+
+
+
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg>
+    <div id="hJJxH8Z-1608250215572" class="" style="display: block !important;"><iframe id="ejwktI8-1608250215575" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: auto !important; position: static !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 350px !important; height: 520px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; display: none !important;"></iframe>
+        <iframe id="tcyRx8x-1608250215578" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: auto 10px 0px auto !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; z-index: 1000001 !important; cursor: auto !important; float: none !important; pointer-events: auto !important; height: 50px !important; min-height: 50px !important; max-height: 50px !important; width: 126px !important; min-width: 126px !important; max-width: 126px !important; border-radius: 0px !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; margin: 0px !important; display: block !important;"></iframe>
+        <iframe id="PeV28X6-1608250215578" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: auto 1px 35px auto !important; position: fixed !important; border: 0px !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; z-index: 1000003 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; width: 21px !important; max-width: 21px !important; min-width: 21px !important; height: 21px !important; max-height: 21px !important; min-height: 21px !important; display: block !important;"></iframe>
+        <div class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: 0px auto auto 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 100% !important; display: none !important; z-index: 1000001 !important; cursor: move !important; float: left !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="M2j4FRW-1608250215572" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: 0px auto auto 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: w-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="LwMO5Hz-1608250215572" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: 0px 0px auto auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: e-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="f1IGegh-1608250215572" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: 0px 0px auto auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: n-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="Vn9pQHX-1608250215572" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: auto 0px 0px auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: s-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="dC4b1nV-1608250215574" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: 0px auto auto 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: nw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="OQCVtKB-1608250215574" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: 0px 0px auto auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: ne-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="rdD4sdO-1608250215574" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: auto auto 0px 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: sw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+        <div id="PUp2oPu-1608250215574" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: auto 0px 0px auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999999 !important; cursor: se-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div><iframe id="nnLlxkG-1608250215645" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; inset: auto 10px 60px auto !important; position: fixed !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 378px !important; height: 503px !important; display: none !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></iframe></div>
+</body>
+
+</html>
